@@ -1,0 +1,21 @@
+<div class="nested-fields">
+    <%= f.hidden_field :_destroy %>
+    <div>
+        <%= f.label :userheight %>
+        <%= f.text_field :userheight %>
+    </div><br><br><br>
+
+    <div>
+        <%= f.label :userage %>
+        <%= f.text_field :userage %>
+    </div><br><br><br>
+
+    <div>
+        <%= f.label :usergender %>
+        <%= f.text_field :usergender %>
+    </div><br><br><br>
+
+    <div>
+        <%= link_to "Remove", '#', class: "remove_fields" %>
+    </div>
+</div>

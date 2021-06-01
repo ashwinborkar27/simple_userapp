@@ -1,0 +1,23 @@
+<%= form_with model: @user, local: true do |f| %>
+    <%#= render "shared/validation-messages", object: @user %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+     <%= f.label :email %>
+    <%= f.text_field :email %>
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+
+    <fieldset>
+        <legend>profile:</legend>
+        <%= f.fields_for :profiles do |profile_form| %> 
+        <%= render "profile_fields", f:profile_form %>
+        
+        <% end %>
+        <%#= link_to_add_fields "Add profile", f.profiles %>
+    </fieldset> 
+
+    <%= f.submit %>
+    <% if params[:action] === "edit" && params[:controller] === "user" %>
+        <%= link_to "Delete User", user_path(@user), method: :delete, data: { confirm: "Are You Sure?" } %>
+    <% end %>
+<% end %>

@@ -1,0 +1,29 @@
+
+
+<h1><%= @user.username %>|<%= @user.email %>|<%= @user.address %></h1>
+
+<% if @user.profile %>
+
+    <h2>profiles:</h2>
+        <table >
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>age</th>
+                    <th>gender</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    
+                <td><%= @user.profile.userheight %></td>
+                <td><%= @user.profile.userage %></td>
+                <td><%= @user.profile.usergeneder %></td>
+                </tr>
+            </tbody>
+        </table> 
+       
+
+<% end %> 
+
+
